@@ -3,7 +3,7 @@ import { Document } from 'mongoose';
 
 @Schema()
 export class Coffee extends Document {
-  @Prop()
+  @Prop({ index: true })
   name: string;
 
   @Prop()
