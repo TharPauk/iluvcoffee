@@ -20,5 +20,6 @@ import { EventSchema, Event } from 'src/events/entities/event.entity';
   ],
   controllers: [CoffeesController],
   providers: [CoffeesService],
+  exports: [CoffeesService],
 })
 export class CoffeesModule {}
