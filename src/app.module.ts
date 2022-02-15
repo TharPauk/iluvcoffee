@@ -5,6 +5,9 @@ import { ConfigModule } from '@nestjs/config';
 import { CoffeesModule } from './coffees/coffees.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { CoffeeRatingModule } from './coffee-rating/coffee-rating.module';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
+import { PassportModule } from '@nestjs/passport';
 
 @Module({
   imports: [
@@ -18,6 +21,8 @@ import { CoffeeRatingModule } from './coffee-rating/coffee-rating.module';
       },
     }),
     CoffeeRatingModule,
+    AuthModule,
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
