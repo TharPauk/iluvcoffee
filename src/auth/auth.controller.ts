@@ -17,7 +17,6 @@ export class AuthController {
   @UseGuards(LocalAuthGuard)
   @Post('/login')
   async login(@Body() body: LoginUserDto): Promise<User> {
-    const { email, password } = body;
-    return this.authService.validateUser(email, password);
+    return this.authService.login(body);
   }
 }
